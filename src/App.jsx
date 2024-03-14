@@ -16,11 +16,13 @@ setBookmark(newBooksMark)
 
 }
 /* mark */
-const handleMark=(marks)=>{
+const handleMark=(marks,id)=>{
 //  console.log( typeof marks)
 const newMark= mark + marks
 setMark(newMark)
 
+const remainingBookMark=bookmark.filter(bookmark => bookmark.id !== id)
+setBookmark(remainingBookMark)
 }
 
   return (

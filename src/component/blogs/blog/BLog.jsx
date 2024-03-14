@@ -3,6 +3,7 @@ import React from "react";
 import { FaBookmark } from "react-icons/fa";
 const BLog = ({ blog,handleBookMark,handleMark }) => {
   const {
+    id,
     title,
     cover,
     author,
@@ -55,7 +56,7 @@ const BLog = ({ blog,handleBookMark,handleMark }) => {
 
 {hashtags.map(hash=> <span key={Math.random()}>#{hash}</span>)}
 </p>
-<a href="#" className=" text-blue-500 underline my-8" onClick={()=>handleMark(reading_time)}>Mark as read</a>
+<a href="#" className=" text-blue-500 underline my-8" onClick={()=>handleMark(reading_time,id)}>Mark as read</a>
 
     </div>
   );
